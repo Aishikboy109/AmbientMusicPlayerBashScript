@@ -1,0 +1,18 @@
+#! /bin/bash
+
+cd /home/aishik/Desktop/dmsounds/sounds
+ls
+if getopts "p:" arg;
+then
+  echo "Playing ambient music in a sequence (Press Ctrl + Z to exit, Ctrl + C to restart from the first music)"
+  for(( ; ; ))
+  do
+  play -q *.mp3 | shuf -n 1
+  done
+
+else
+  echo "Enter the name of sound file (without extension) : "
+  read filename
+  echo $filename
+  play -q $filename.mp3
+fi
