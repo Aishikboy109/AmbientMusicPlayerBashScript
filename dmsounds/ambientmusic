@@ -1,6 +1,6 @@
 #! /bin/bash
 
-cd /home/aishik/Desktop/dmsounds/sounds
+cd ./sounds
 ls
 if getopts "p:" arg;
 then
